@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "decisions": [
+    {
+      "start": 14,
+      "end": 27,
+      "decision": "accepted",
+      "newText": "结尾   三个空格要保留，请勿修改。"
+    }
+  ]
+}

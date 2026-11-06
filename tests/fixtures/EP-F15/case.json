@@ -1,0 +1,26 @@
+{
+  "id": "EP-F15",
+  "kind": "compose",
+  "title": "emoji ZWJ 序列",
+  "description": "首段含家庭 emoji 👨‍👩‍👧‍👦（4 个代理对 + 3 个 ZWJ，共 11 个 UTF-16 单元，位于 p1 索引 5 处）；段内“很温馨→很珍贵”与保护冲突，blocked，ZWJ 序列不得拆开批准；第二段改动接受。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f15-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "protectionsFile": "protections.json",
+  "notes": "保护范围 p1=[0,21)；ZWJ 序列必须整体保留，差异端点须落在完整 grapheme 边界。"
+}

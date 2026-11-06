@@ -1,0 +1,56 @@
+{
+  "id": "EP-P01",
+  "kind": "performance",
+  "description": "固定性能样本：20 行各 99 个 CJK 基本区字符再接 LF，共 2000 UTF-16 单元；各行固定 5 个位置替换为不同的单个字符，共 100 个替换，候选长度相同；保护第 4、8、12、16、20 行。",
+  "lines": 20,
+  "charsPerLine": 99,
+  "totalUtf16Units": 2000,
+  "substitutionsPerLine": 5,
+  "totalSubstitutions": 100,
+  "substitutionPositions": [
+    10,
+    30,
+    50,
+    70,
+    90
+  ],
+  "substitutionChars": [
+    "改",
+    "修",
+    "订",
+    "增",
+    "删"
+  ],
+  "lineChars": [
+    "甲",
+    "乙",
+    "丙",
+    "丁",
+    "戊",
+    "己",
+    "庚",
+    "辛",
+    "壬",
+    "癸",
+    "子",
+    "丑",
+    "寅",
+    "卯",
+    "辰",
+    "巳",
+    "午",
+    "未",
+    "申",
+    "酉"
+  ],
+  "protectedLines": [
+    4,
+    8,
+    12,
+    16,
+    20
+  ],
+  "originalSha256": "3b8038ac5d7b0f81dbe66e63a7f9c9f407b3be573d95aacc70806bf3c7748a24",
+  "candidateSha256": "57b38561fcd9fedc9ea01ad334e665dda620e283e1675be724cbf0cfb6141a37",
+  "note": "受保护行内的替换将与保护冲突（blocked），属预期；本样本用于计量 analyze+哈希+Worker 往返耗时，不用于合成正确性。计时方法与 P95 定义见项目书 §12.1，实测属 T011。"
+}

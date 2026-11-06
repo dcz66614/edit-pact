@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "decisions": [
+    {
+      "start": 0,
+      "end": 7,
+      "decision": "accepted",
+      "newText": "请在周五前回复确认。"
+    },
+    {
+      "start": 18,
+      "end": 23,
+      "decision": "accepted",
+      "newText": "感谢配合。"
+    }
+  ]
+}

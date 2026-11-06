@@ -1,0 +1,25 @@
+{
+  "id": "EP-F04",
+  "kind": "compose",
+  "title": "全部保护",
+  "description": "三段全部受保护；全部变更均冲突为 blocked，自动保留原文；blocked 不计为 pending，合成可导出且等于原稿。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f04-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "protectionsFile": "protections.json",
+  "notes": "decisions.json 缺省：blocked 是自动判定，不是用户决定。"
+}

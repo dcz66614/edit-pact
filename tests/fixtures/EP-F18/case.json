@@ -1,0 +1,28 @@
+{
+  "id": "EP-F18",
+  "kind": "workflow",
+  "title": "改稿变化保留保护、清除分析",
+  "description": "rev1 分析完成后改稿变化为 candidate-v2.txt（revision 2）；保留原稿与保护，清除分析与决定，回到 prepare，不可导出。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "protectionsFile": "protections.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f18-a"
+    },
+    {
+      "type": "changeCandidate",
+      "revision": 2,
+      "file": "candidate-v2.txt"
+    }
+  ],
+  "expectedOutcome": "state",
+  "expectedState": {
+    "phase": "prepare",
+    "analysisNull": true,
+    "exportable": false
+  },
+  "hasText": false
+}

@@ -1,0 +1,24 @@
+{
+  "id": "EP-F02",
+  "kind": "compose",
+  "title": "相同文本",
+  "description": "原稿与改稿完全相同，无 Hunk，无决定；合成结果等于原稿。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f02-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "notes": "decisions.json 缺省表示无决定；expected.txt 等于 original.txt。"
+}

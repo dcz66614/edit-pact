@@ -1,0 +1,344 @@
+/* P012 改稿守约 Edit Pact — 审阅与成稿样式（T008）。
+ * 仅系统字体，无外部资源。主操作深蓝，普通文字深灰，
+ * 冲突与提示用琥珀色；不使用绿色百分比或盾牌图案暗示事实已核实。
+ * 状态只用文字表达，不用颜色作为唯一区分手段。 */
+
+.review-panel,
+.result-panel {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #1a1a1a;
+}
+
+.review-title,
+.result-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+}
+
+.review-notice {
+  margin: 0 0 1rem;
+  padding: 0.5rem 0.75rem;
+  background: #fff7e0;
+  border: 1px solid #d9a441;
+  border-radius: 4px;
+  color: #6b4e00;
+}
+
+.review-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 5fr) minmax(0, 3fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.review-subtitle {
+  margin: 0.75rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* 左栏：原稿与保护标记。 */
+
+.review-paragraph {
+  margin: 0 0 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.review-paragraph--protected {
+  border-color: #d9a441;
+  background: #fff7e0;
+}
+
+.review-paragraph-index {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.review-protected-tag {
+  font-size: 0.85rem;
+  color: #6b4e00;
+  border: 1px solid #d9a441;
+  border-radius: 3px;
+  padding: 0 0.3rem;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+}
+
+.review-paragraph-text {
+  overflow-wrap: anywhere;
+}
+
+/* 中栏：变更列表。 */
+
+.review-hunk-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.review-hunk-item {
+  margin-bottom: 1rem;
+}
+
+.review-no-diff {
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 单条变更卡片。 */
+
+.hunk-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.75rem;
+  background: #fff;
+}
+
+.hunk-card--blocked {
+  border-color: #d9a441;
+  background: #fff7e0;
+}
+
+.hunk-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.hunk-title {
+  font-weight: 600;
+}
+
+.hunk-status {
+  flex: none;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.hunk-card--blocked .hunk-status {
+  color: #6b4e00;
+  font-weight: 600;
+}
+
+.hunk-context {
+  margin: 0 0 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.hunk-context-paragraph {
+  margin: 0 0 0.25rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.hunk-context-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.hunk-context-index {
+  font-weight: 600;
+}
+
+.hunk-context-changed {
+  background: #ffe08a;
+  color: inherit;
+}
+
+.hunk-insertion-marker {
+  font-weight: 600;
+  color: #1d4e89;
+}
+
+.hunk-texts {
+  margin: 0 0 0.5rem;
+}
+
+.hunk-text-row {
+  margin: 0 0 0.25rem;
+}
+
+.hunk-text-label {
+  font-weight: 600;
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.hunk-text-value {
+  display: inline;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.hunk-empty-note {
+  color: #555;
+}
+
+.hunk-foldable-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.hunk-expand {
+  margin-left: 0.5rem;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #1d4e89;
+  text-decoration: underline;
+}
+
+.hunk-blocked-note {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0.75rem;
+  background: #fff;
+  border: 1px solid #d9a441;
+  border-radius: 4px;
+  color: #6b4e00;
+}
+
+.hunk-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hunk-accept-button,
+.hunk-back-button,
+.review-keep-button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  background: #1d4e89;
+  color: #fff;
+}
+
+.hunk-reject-button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #1d4e89;
+  border: 1px solid #1d4e89;
+}
+
+.hunk-accept-button:hover,
+.hunk-back-button:hover,
+.review-keep-button:hover {
+  background: #173f6e;
+}
+
+.hunk-reject-button:hover {
+  background: #e8eff7;
+}
+
+.hunk-accept-button:disabled,
+.hunk-reject-button:disabled,
+.review-keep-button:disabled {
+  background: #999;
+  border-color: #999;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.hunk-accept-button:focus-visible,
+.hunk-reject-button:focus-visible,
+.hunk-back-button:focus-visible,
+.hunk-expand:focus-visible,
+.review-keep-button:focus-visible {
+  outline: 3px solid #1d4e89;
+  outline-offset: 2px;
+}
+
+/* 右栏：审阅进度。 */
+
+.review-counts {
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+}
+
+.review-pending-note,
+.review-ready-note {
+  margin: 0 0 0.75rem;
+}
+
+.review-ready-note {
+  color: #333;
+}
+
+.review-keep-note {
+  margin: 0.5rem 0 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* 成稿面板。 */
+
+.result-counts {
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+}
+
+.result-text {
+  margin: 0 0 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  background: #fff;
+}
+
+.result-empty-note,
+.result-not-ready {
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #555;
+}
+
+.result-note {
+  margin: 0 0 0.25rem;
+  font-weight: 600;
+}
+
+.result-disclaimer {
+  margin: 0;
+  color: #6b4e00;
+}
+
+@media (max-width: 1023px) {
+  .review-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .review-panel,
+  .result-panel {
+    padding: 0.75rem;
+  }
+}

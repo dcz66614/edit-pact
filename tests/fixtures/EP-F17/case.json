@@ -1,0 +1,28 @@
+{
+  "id": "EP-F17",
+  "kind": "workflow",
+  "title": "原稿变化使旧分析失效",
+  "description": "rev1 分析完成后原稿变化为 original-v2.txt（revision 2）；旧 analysisId 包含旧 revision/jobId，不得复用旧批准；分析清空，回到 prepare，不可导出。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f17-a"
+    },
+    {
+      "type": "changeOriginal",
+      "revision": 2,
+      "file": "original-v2.txt"
+    }
+  ],
+  "expectedOutcome": "state",
+  "expectedState": {
+    "phase": "prepare",
+    "analysisNull": true,
+    "exportable": false
+  },
+  "hasText": false,
+  "notes": "内容恢复为旧值仍是新批准轮次：revision 已变，即使改回原值也不能复用旧 analysisId。"
+}

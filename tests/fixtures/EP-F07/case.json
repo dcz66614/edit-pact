@@ -1,0 +1,26 @@
+{
+  "id": "EP-F07",
+  "kind": "compose",
+  "title": "跨区替换",
+  "description": "改稿把第二、三段合并为一段；最小差异把改动拆成两处：h1 [11,18) 与保护段 [9,16) 重叠被 blocked，h2 [20,21) 在第三段内 pending；接受 h2 后合成结果保留第二段原文、第三段取改稿。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f07-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "protectionsFile": "protections.json",
+  "notes": "跨段替换按最小差异拆成两个 Hunk；与保护重叠的 h1 被拦截，第三段内的 h2 是独立改动，可单独接受。"
+}

@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "decisions": [
+    {
+      "start": 17,
+      "end": 25,
+      "decision": "accepted",
+      "newText": "结尾段已经改写。"
+    }
+  ]
+}

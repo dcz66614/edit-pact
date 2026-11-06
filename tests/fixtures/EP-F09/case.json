@@ -1,0 +1,25 @@
+{
+  "id": "EP-F09",
+  "kind": "compose",
+  "title": "重复段",
+  "description": "“注意：仅限内部使用。”出现两次，只保护第一次出现的位置；第二次出现可改，第一次必须原样保留。保护绑定原稿位置，不绑定文字内容。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f09-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "protectionsFile": "protections.json"
+}

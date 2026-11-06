@@ -1,0 +1,317 @@
+/* P012 改稿守约 Edit Pact — 应用全局样式（T009）。
+ *
+ * 与 prepare.css / review.css 同系：深蓝主操作（#1d4e89），深灰
+ * 文字（#1a1a1a），琥珀冲突（#d9a441 底、#6b4e00 字、#fff7e0 底）。
+ * 系统字体，不引外部字体、不联网。index.css 的 main 限宽 720px
+ * 是 T001 骨架壳的约定，本文件以更高特异度覆盖为工作台宽度，
+ * 不改 index.css。
+ */
+
+.edit-pact main {
+  max-width: 1180px;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.app-header {
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.app-header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
+.app-subtitle {
+  margin: 0 0 0.5rem;
+  color: #1a1a1a;
+}
+
+.app-privacy {
+  margin: 0 0 1rem;
+  color: #555;
+}
+
+.app-steps {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.app-step {
+  color: #777;
+}
+
+.app-step--current {
+  color: #1d4e89;
+  font-weight: 700;
+}
+
+.app-step--done {
+  color: #1a1a1a;
+}
+
+.app-clear-button,
+.app-cancel-button,
+.app-retry-button,
+.app-back-button,
+.app-back-to-review-button,
+.app-import-button,
+.app-copy-button,
+.app-download-button,
+.app-receipt-button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #1d4e89;
+  background: #fff;
+  color: #1d4e89;
+}
+
+.app-clear-button:disabled,
+.candidate-begin-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.app-clear-button:hover:not(:disabled),
+.app-cancel-button:hover,
+.app-retry-button:hover,
+.app-back-button:hover,
+.app-back-to-review-button:hover,
+.app-import-button:hover,
+.app-copy-button:hover,
+.app-download-button:hover,
+.app-receipt-button:hover {
+  background: #eef3fa;
+}
+
+.app-error {
+  border: 1px solid #d9a441;
+  background: #fff7e0;
+  color: #6b4e00;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.app-error p {
+  margin: 0;
+}
+
+.app-error-dismiss {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #6b4e00;
+  text-decoration: underline;
+  flex-shrink: 0;
+}
+
+.app-import-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+
+.app-import-note {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.app-file-input,
+.candidate-file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.app-back-note {
+  border: 1px solid #d9a441;
+  background: #fff7e0;
+  color: #6b4e00;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+}
+
+.candidate-panel {
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.candidate-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.candidate-help {
+  margin: 0 0 0.75rem;
+  color: #555;
+}
+
+.candidate-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.candidate-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  line-height: 1.6;
+  padding: 0.5rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.candidate-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+  margin-top: 0.5rem;
+}
+
+.candidate-import-button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #1d4e89;
+  background: #fff;
+  color: #1d4e89;
+}
+
+.candidate-status {
+  margin: 0;
+  color: #555;
+}
+
+.candidate-begin-button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.6rem 1.25rem;
+  border: none;
+  background: #1d4e89;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.candidate-begin-button:hover:not(:disabled) {
+  background: #173f6e;
+}
+
+.candidate-begin-note,
+.candidate-blocked-reason {
+  margin: 0.5rem 0 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.app-comparing,
+.app-error-panel {
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.app-comparing h2,
+.app-error-panel h2 {
+  margin-top: 0;
+}
+
+.app-error-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.app-compose-wait {
+  color: #555;
+}
+
+.app-export {
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.app-export h3 {
+  margin: 0 0 0.75rem;
+}
+
+.app-export-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.app-copy-ok {
+  color: #1d4e89;
+}
+
+.app-copy-failed {
+  border: 1px solid #d9a441;
+  background: #fff7e0;
+  color: #6b4e00;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+}
+
+.app-fallback-label {
+  display: block;
+  font-weight: 700;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.app-fallback-text {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  line-height: 1.6;
+  padding: 0.5rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.app-receipt-note {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 0.75rem 0 0;
+}
+
+:focus-visible {
+  outline: 2px solid #1d4e89;
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .edit-pact main {
+    padding: 1rem 0.75rem 2rem;
+  }
+}

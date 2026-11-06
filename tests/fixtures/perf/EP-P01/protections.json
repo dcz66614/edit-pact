@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "protections": [
+    {
+      "id": "prot-p01-1",
+      "paragraphId": "p4",
+      "start": 300,
+      "end": 399
+    },
+    {
+      "id": "prot-p01-2",
+      "paragraphId": "p8",
+      "start": 700,
+      "end": 799
+    },
+    {
+      "id": "prot-p01-3",
+      "paragraphId": "p12",
+      "start": 1100,
+      "end": 1199
+    },
+    {
+      "id": "prot-p01-4",
+      "paragraphId": "p16",
+      "start": 1500,
+      "end": 1599
+    },
+    {
+      "id": "prot-p01-5",
+      "paragraphId": "p20",
+      "start": 1900,
+      "end": 1999
+    }
+  ]
+}

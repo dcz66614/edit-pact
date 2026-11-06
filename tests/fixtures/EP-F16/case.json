@@ -1,0 +1,26 @@
+{
+  "id": "EP-F16",
+  "kind": "compose",
+  "title": "组合字符",
+  "description": "首段 Café 的 é 写为 e + U+0301 组合锐音符（5 个 UTF-16 单元）；段内“开业→开张”与保护冲突，blocked，组合序列不得拆开；第二段改动接受。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f16-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "protectionsFile": "protections.json",
+  "notes": "不得做 Unicode NFC/NFKC 归一化；组合字符序列按 grapheme 整体处理。"
+}

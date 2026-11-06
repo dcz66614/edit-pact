@@ -1,0 +1,287 @@
+/* P012 改稿守约 Edit Pact — 准备页样式（T007）。
+ * 仅系统字体，无外部资源。主操作深蓝，普通文字深灰，
+ * 提示用琥珀色；不使用绿色百分比或盾牌图案暗示事实已核实。 */
+
+.prepare-panel {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #1a1a1a;
+}
+
+.prepare-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+}
+
+.prepare-notice {
+  margin: 0 0 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #fff7e0;
+  border: 1px solid #d9a441;
+  border-radius: 4px;
+  color: #6b4e00;
+}
+
+.prepare-help {
+  margin: 0 0 1rem;
+  color: #333;
+}
+
+.prepare-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.prepare-label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+}
+
+.prepare-textarea,
+.prepare-goal-input {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  border: 1px solid #888;
+  border-radius: 4px;
+  padding: 0.5rem;
+  background: #fff;
+}
+
+.prepare-textarea {
+  min-height: 12rem;
+  resize: vertical;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prepare-goal-count {
+  margin: 0.25rem 0 0;
+  color: #555;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+.prepare-empty {
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+  border: 1px dashed #888;
+  border-radius: 4px;
+}
+
+.prepare-example-button,
+.prepare-begin-button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  background: #1d4e89;
+  color: #fff;
+}
+
+.prepare-example-button:hover,
+.prepare-begin-button:hover {
+  background: #173f6e;
+}
+
+.prepare-example-button:focus-visible,
+.prepare-begin-button:focus-visible,
+.protection-checkbox:focus-visible,
+.protection-expand:focus-visible,
+.prepare-textarea:focus-visible,
+.prepare-goal-input:focus-visible {
+  outline: 3px solid #1d4e89;
+  outline-offset: 2px;
+}
+
+.prepare-begin-button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.prepare-example-note {
+  margin: 0.5rem 0 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.prepare-issues {
+  margin: 0.75rem 0;
+  padding: 0.5rem 0.75rem 0.5rem 1.5rem;
+  background: #fff7e0;
+  border: 1px solid #d9a441;
+  border-radius: 4px;
+  color: #6b4e00;
+}
+
+.prepare-subtitle {
+  margin: 0.75rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.prepare-no-protection,
+.prepare-protected-count {
+  margin: 0 0 0.75rem;
+}
+
+.prepare-no-protection {
+  color: #6b4e00;
+}
+
+.protection-count {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.protection-cap-note {
+  margin: 0 0 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #fff7e0;
+  border: 1px solid #d9a441;
+  border-radius: 4px;
+  color: #6b4e00;
+}
+
+.protection-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.protection-row {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.protection-label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.protection-checkbox {
+  flex: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+.protection-checkbox:disabled {
+  cursor: not-allowed;
+}
+
+.protection-index {
+  flex: none;
+  font-weight: 600;
+}
+
+.protection-blank-tag {
+  flex: none;
+  font-size: 0.85rem;
+  color: #555;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 0 0.3rem;
+}
+
+.protection-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.protection-expand {
+  margin: 0.4rem 0 0 1.8rem;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #1d4e89;
+  text-decoration: underline;
+}
+
+.prepare-instruction {
+  margin: 1rem 0 0;
+  padding: 0.75rem;
+  border: 1px solid #888;
+  border-radius: 4px;
+}
+
+.prepare-instruction-note {
+  margin: 0.25rem 0 0;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.prepare-instruction-text {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  border: 1px solid #888;
+  border-radius: 4px;
+  padding: 0.5rem;
+  background: #f7f7f7;
+  min-height: 8rem;
+  resize: vertical;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prepare-instruction-copy-button {
+  margin-top: 0.5rem;
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  background: #1d4e89;
+  color: #fff;
+}
+
+.prepare-instruction-copy-button:hover {
+  background: #173f6e;
+}
+
+.prepare-instruction-copy-button:focus-visible,
+.prepare-instruction-text:focus-visible {
+  outline: 3px solid #1d4e89;
+  outline-offset: 2px;
+}
+
+.prepare-instruction-ok {
+  margin: 0.5rem 0 0;
+  color: #1d4e89;
+}
+
+.prepare-instruction-failed {
+  margin: 0.5rem 0 0;
+  padding: 0.5rem 0.75rem;
+  background: #fff7e0;
+  border: 1px solid #d9a441;
+  border-radius: 4px;
+  color: #6b4e00;
+}
+
+@media (max-width: 1023px) {
+  .prepare-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .prepare-panel {
+    padding: 0.75rem;
+  }
+}

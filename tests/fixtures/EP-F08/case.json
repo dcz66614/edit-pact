@@ -1,0 +1,26 @@
+{
+  "id": "EP-F08",
+  "kind": "compose",
+  "title": "边界插入",
+  "description": "纯插入 [6,6) 紧贴保护段末端（s<=a<=e），冲突 blocked；文末插入 [13,13) 在保护范围外，接受。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f08-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "protectionsFile": "protections.json",
+  "notes": "两端拦截：保护文字紧贴位置的前后缀插入也算冲突，不能继续宣称该段未受影响。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "EP-F06",
+  "kind": "compose",
+  "title": "保护段删除",
+  "description": "改稿删除受保护的第二段（冲突，blocked，保留）；第三段改写接受。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f06-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "protectionsFile": "protections.json",
+  "notes": "删除保护段的 Hunk 与保护范围重叠即冲突；不得以“整段删除不留痕迹”为由绕过。"
+}

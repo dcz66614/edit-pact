@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "protections": [
+    {
+      "id": "prot-1",
+      "paragraphId": "p2",
+      "start": 10,
+      "end": 21
+    }
+  ]
+}

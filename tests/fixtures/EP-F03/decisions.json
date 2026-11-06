@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "decisions": [
+    {
+      "start": 0,
+      "end": 7,
+      "decision": "accepted",
+      "newText": "第一段新文字。"
+    },
+    {
+      "start": 8,
+      "end": 15,
+      "decision": "accepted",
+      "newText": "第二段新文字。"
+    },
+    {
+      "start": 16,
+      "end": 23,
+      "decision": "accepted",
+      "newText": "第三段新文字。"
+    }
+  ]
+}

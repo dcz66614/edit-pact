@@ -1,0 +1,25 @@
+{
+  "id": "EP-F10",
+  "kind": "compose",
+  "title": "段落重排",
+  "description": "乙、丙两段互换位置，表达为区间 [6,17) 的一次多行替换并接受；首段受保护且未动。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f10-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "protectionsFile": "protections.json"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "EP-F23",
+  "kind": "compose",
+  "title": "恶意 HTML 按纯文本处理",
+  "description": "改稿第二段追加 <script> 文本；全部输入按文本渲染，不得用 innerHTML 执行；接受后该文本原样进入最终稿（字面保留），不执行、不转义为标签。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f23-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "notes": "本组只冻结文本层面的字面保留；UI 不执行脚本由 T007/T008 与 E2E 覆盖。"
+}

@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "decisions": [
+    {
+      "start": 20,
+      "end": 21,
+      "decision": "accepted",
+      "newText": "合并后的"
+    }
+  ]
+}

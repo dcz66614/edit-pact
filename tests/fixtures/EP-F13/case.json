@@ -1,0 +1,27 @@
+{
+  "id": "EP-F13",
+  "kind": "compose",
+  "title": "CRLF 行尾",
+  "description": "原始文件含 CRLF 行尾；唯一规范化是 CRLF/CR 转 LF，保护与决定区间一律按规范化后坐标；expected.txt 为 LF。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f13-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "protectionsFile": "protections.json",
+  "lineEndings": "CRLF",
+  "notes": "不得 trim、替换空格或做 Unicode 归一化；只转行尾。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "EP-F22",
+  "kind": "workflow",
+  "title": "比较超时取消",
+  "description": "比较进行中取消 job-ep-f22-a：Worker 终止，下次重建；分析为空，回到 prepare，不可导出；取消不产生旧结果。超时单元例使用受控时钟，真实耗时另由性能测试证明。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f22-a"
+    },
+    {
+      "type": "cancel",
+      "jobId": "job-ep-f22-a"
+    }
+  ],
+  "expectedOutcome": "state",
+  "expectedState": {
+    "phase": "prepare",
+    "analysisNull": true,
+    "exportable": false
+  },
+  "hasText": false
+}

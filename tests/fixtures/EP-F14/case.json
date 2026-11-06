@@ -1,0 +1,25 @@
+{
+  "id": "EP-F14",
+  "kind": "compose",
+  "title": "连续空格",
+  "description": "第一段含连续两个空格，第二段含连续三个空格；改动只追加文字，全部空格原样保留，大小写与空格敏感。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f14-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "notes": "newText 中的三个空格与原稿一致；校验器逐字节比对 expected.txt。"
+}

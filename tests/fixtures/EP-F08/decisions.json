@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "decisions": [
+    {
+      "start": 13,
+      "end": 13,
+      "decision": "accepted",
+      "newText": "追加内容。"
+    }
+  ]
+}

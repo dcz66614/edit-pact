@@ -1,0 +1,19 @@
+{
+  "id": "EP-F21",
+  "kind": "validation",
+  "title": "原稿超长拒绝导入",
+  "description": "原稿为 12001 个“测”（12001 个 UTF-16 单元，超过上限 12000），validate 返回 TOO_LONG；拒绝本次导入，保留之前输入。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "actions": [
+    {
+      "type": "validate",
+      "field": "original"
+    }
+  ],
+  "expectedOutcome": "error",
+  "expectedErrorCode": "INVALID_INPUT",
+  "expectedIssueCode": "TOO_LONG",
+  "hasText": false,
+  "notes": "original.txt 由人工定稿的重复模式生成：python3 -c \"print(\"测\"*12001, end=\"\")\"；模式合成、无私人内容。"
+}

@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "decisions": [
+    {
+      "start": 0,
+      "end": 9,
+      "decision": "accepted",
+      "newText": "会议定于3月12日。"
+    }
+  ]
+}

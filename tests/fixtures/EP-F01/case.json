@@ -1,0 +1,26 @@
+{
+  "id": "EP-F01",
+  "kind": "compose",
+  "title": "正常局部修改",
+  "description": "三段正文：保护第二段“人数上限为30人。”，接受第一、三段改动；30 改 50 的变更与保护冲突，自动 blocked，保留 30。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f01-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "protectionsFile": "protections.json",
+  "notes": "与项目书 §11.1 正常混合采纳同构；Hunk 数量由 T004 锁定算法决定，本组只冻结合成结果与保护不变量。"
+}

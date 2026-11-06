@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "decisions": [
+    {
+      "start": 6,
+      "end": 21,
+      "decision": "accepted",
+      "newText": "新第二行内容。\n新第三行内容。"
+    }
+  ]
+}

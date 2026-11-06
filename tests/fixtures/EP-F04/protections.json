@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "protections": [
+    {
+      "id": "prot-1",
+      "paragraphId": "p1",
+      "start": 0,
+      "end": 7
+    },
+    {
+      "id": "prot-2",
+      "paragraphId": "p2",
+      "start": 8,
+      "end": 15
+    },
+    {
+      "id": "prot-3",
+      "paragraphId": "p3",
+      "start": 16,
+      "end": 23
+    }
+  ]
+}

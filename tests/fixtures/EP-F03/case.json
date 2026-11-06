@@ -1,0 +1,24 @@
+{
+  "id": "EP-F03",
+  "kind": "compose",
+  "title": "无保护、全部接受",
+  "description": "无保护范围，三段改动全部接受；全采纳应精确得到改稿。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f03-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true
+}

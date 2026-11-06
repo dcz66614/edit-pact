@@ -1,0 +1,44 @@
+{
+  "dependencies": {
+    "diff": "9.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "zod": "3.25.76"
+  },
+  "description": "P012 改稿守约 Edit Pact — protect verbatim paragraphs before AI polishing; local-first, no model calls (READY_FOR_FINAL_REVIEW; frozen release package, see README.md)",
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
+    "@vitejs/plugin-react": "4.7.0",
+    "jsdom": "31.0.0",
+    "typescript": "5.9.3",
+    "vite": "5.4.21",
+    "vitest": "2.1.9"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "name": "p012-edit-pact",
+  "private": true,
+  "scripts": {
+    "build": "tsc -b && vite build",
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "fixtures:check": "node scripts/check-fixtures.mjs",
+    "gate": "node scripts/gate.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test": "vitest run",
+    "test:invariants": "vitest run tests/unit/invariants.test.ts",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc -b",
+    "test:privacy": "playwright test tests/e2e/privacy.spec.ts",
+    "benchmark": "node scripts/benchmark.mjs",
+    "evaluate": "node scripts/evaluate.mjs",
+    "evaluation:check": "node scripts/evaluation-check.mjs",
+    "verify": "node scripts/verify.mjs",
+    "release:pack": "node scripts/package-release.mjs",
+    "release:verify": "node scripts/hash-release.mjs && node scripts/verify-dist-quickstart.mjs"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}

@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "decisions": [
+    {
+      "start": 9,
+      "end": 17,
+      "decision": "accepted",
+      "newText": "第二段普通文字。<script>alert(\"x\")</script>"
+    }
+  ]
+}

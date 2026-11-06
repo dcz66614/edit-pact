@@ -1,0 +1,21 @@
+{
+  "id": "EP-F20",
+  "kind": "workflow",
+  "title": "待审导出被拒绝",
+  "description": "分析后未做任何决定，仍有 pending Hunk；此时 compose 立即返回 PENDING_REVIEW，不返回预览文字，不可导出。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f20-a"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "error",
+  "expectedErrorCode": "PENDING_REVIEW",
+  "hasText": false
+}

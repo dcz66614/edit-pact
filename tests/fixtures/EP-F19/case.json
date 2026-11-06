@@ -1,0 +1,29 @@
+{
+  "id": "EP-F19",
+  "kind": "workflow",
+  "title": "保护变化清除决定并重算",
+  "description": "rev1 分析完成后保护由 p1 改为 p2（revision 2）；保留两稿，清除决定，以新 jobId job-ep-f19-b 重算分析；新分析存在但仍有 pending 决定，不可导出。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "protectionsFile": "protections.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f19-a"
+    },
+    {
+      "type": "changeProtections",
+      "revision": 2,
+      "file": "protections-v2.json"
+    }
+  ],
+  "expectedOutcome": "state",
+  "expectedState": {
+    "phase": "review",
+    "analysisNull": false,
+    "exportable": false,
+    "decisionsEmpty": true
+  },
+  "hasText": false
+}

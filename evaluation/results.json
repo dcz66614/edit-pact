@@ -1,0 +1,16 @@
+{
+  "project_id": "P012",
+  "protocol_version": "1.0.0",
+  "spec_version": "1.0.0",
+  "participants_recruited": 0,
+  "participants_required_min": 6,
+  "participants_target": 8,
+  "input_file": "evaluation/observations.csv",
+  "generator": "scripts/evaluate.mjs",
+  "status": "USER_VALUE_NOT_MEASURED",
+  "reason_not_measured": "No participants were recruited in this round: Sam was away, no invitations were sent, and no authorized recruitment channel was on standby. See evaluation/PROTOCOL.md §9.",
+  "retest_plan": "When Sam recruits >= 6 participants, run the frozen protocol (evaluation/PROTOCOL.md v1.0.0) with the T009 prototype, then re-run npm run evaluate and npm run evaluation:check.",
+  "metrics": null,
+  "thresholds": null,
+  "generated_at_utc": "2026-11-05T21:04:36.146Z"
+}

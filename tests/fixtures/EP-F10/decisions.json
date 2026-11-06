@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "decisions": [
+    {
+      "start": 6,
+      "end": 17,
+      "decision": "accepted",
+      "newText": "丙段内容。\n乙段内容。"
+    }
+  ]
+}

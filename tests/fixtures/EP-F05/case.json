@@ -1,0 +1,25 @@
+{
+  "id": "EP-F05",
+  "kind": "compose",
+  "title": "日期与人数变动",
+  "description": "日期 3月5日→3月12日接受；人数 20→25 与保护段冲突，保留 20。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f05-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "protectionsFile": "protections.json"
+}

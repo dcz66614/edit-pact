@@ -1,0 +1,25 @@
+{
+  "id": "EP-F12",
+  "kind": "compose",
+  "title": "空改稿",
+  "description": "改稿为空（显式删除场景），接受整篇删除；合法空结果以空 expected.txt 表示，与“无结果”区分。",
+  "originalFile": "original.txt",
+  "candidateFile": "candidate.txt",
+  "decisionsFile": "decisions.json",
+  "actions": [
+    {
+      "type": "analyze",
+      "revision": 1,
+      "jobId": "job-ep-f12-a"
+    },
+    {
+      "type": "applyDecisions"
+    },
+    {
+      "type": "compose"
+    }
+  ],
+  "expectedOutcome": "success",
+  "hasText": true,
+  "notes": "expected.txt 为 0 字节空文件；hasText=true 表示合成成功且结果为空。"
+}
